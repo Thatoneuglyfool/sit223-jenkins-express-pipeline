@@ -6,7 +6,7 @@
   "contributors": [
     "Aaron Heckmann <aaron.heckmann+github@gmail.com>",
     "Ciaran Jessup <ciaranj@gmail.com>",
-    "Douglas Christopher Wilson <doug@somethingdoug.com>",
+    "Douglas Wilson <doug@somethingdoug.com>",
     "Guillermo Rauch <rauchg@gmail.com>",
     "Jonathan Ong <me@jongleberry.com>",
     "Roman Shtylman <shtylman+expressjs@gmail.com>",
@@ -43,6 +43,7 @@
     "encodeurl": "^2.0.0",
     "escape-html": "^1.0.3",
     "etag": "^1.8.1",
+    "express": "^5.2.1",
     "finalhandler": "^2.1.0",
     "fresh": "^2.0.0",
     "http-errors": "^2.0.0",
@@ -89,6 +90,7 @@
     "lib/"
   ],
   "scripts": {
+    "start": "node app.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "mocha --require test/support/env --reporter spec --check-leaks test/ test/acceptance/",
