@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require('./index');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -31,6 +31,10 @@ app.get('/api/info', (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`Application running on http://localhost:${port}`);
-});
+if (require.main === module) {
+  app.listen(port, () => {
+    console.log(`Application running on http://localhost:${port}`);
+  });
+}
+
+module.exports = app;

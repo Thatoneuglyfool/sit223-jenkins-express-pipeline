@@ -89,12 +89,13 @@
     "lib/"
   ],
   "scripts": {
-    "start": "node app.js",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "test": "mocha --require test/support/env --reporter spec --check-leaks test/ test/acceptance/",
-    "test-ci": "nyc --exclude examples --exclude test --exclude benchmarks --reporter=lcovonly --reporter=text npm test",
-    "test-cov": "nyc --exclude examples --exclude test --exclude benchmarks --reporter=html --reporter=text npm test",
-    "test-tap": "mocha --require test/support/env --reporter tap --check-leaks test/ test/acceptance/"
+  "start": "node app.js",
+  "lint": "eslint .",
+  "lint:fix": "eslint . --fix",
+  "test": "mocha --require test/support/env --reporter spec --check-leaks test/ test/acceptance/",
+  "test:pipeline": "mocha pipeline-tests/*.test.js",
+  "test-ci": "nyc --exclude examples --exclude test --exclude benchmarks --reporter=lcovonly --reporter=text npm test",
+  "test-cov": "nyc --exclude examples --exclude test --exclude benchmarks --reporter=html --reporter=text npm test",
+  "test-tap": "mocha --require test/support/env --reporter tap --check-leaks test/ test/acceptance/"
   }
 }
