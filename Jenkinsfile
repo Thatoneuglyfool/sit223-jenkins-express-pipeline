@@ -32,11 +32,9 @@ pipeline {
         }
 
         stage('Code Quality') {
-    steps {
-        echo 'Running SonarCloud code quality analysis...'
-        bat 'C:\\sonar-scanner\\bin\\sonar-scanner.bat'
-    }
-}
+            steps {
+                echo 'Running SonarCloud code quality analysis...'
+                bat 'C:\\sonar-scanner\\bin\\sonar-scanner.bat'
             }
         }
 
