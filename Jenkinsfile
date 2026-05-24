@@ -34,7 +34,9 @@ pipeline {
         stage('Code Quality') {
             steps {
                 echo 'Running SonarCloud code quality analysis...'
-                bat 'C:\\sonar-scanner\\bin\\sonar-scanner.bat'
+                withCredentials([string(credentialsId: 'SONAR_TOKEN', variable: 'SONAR_TOKEN')]) {
+                    bat 'C:\\sonar-scanner\\bin\\sonar-scanner.bat -Dsonar.token=%SONAR_TOKEN%'
+                }
             }
         }
 
